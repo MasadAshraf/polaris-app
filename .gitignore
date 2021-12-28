@@ -17,3 +17,4 @@ yarn-error.log
 /.vscode
 /.env.example
 /package-lock.json
+/public/mix-manifest.json
