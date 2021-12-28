@@ -30,10 +30,10 @@ function App() {
     return (
 
         <AppProvider i18n={enTranslations}>
-           {/* <Page>
+            <Page>
                 <Card>
                     <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
-                        <Card.Section title={tabs[selected].content}>
+                        <Card.Section >
                             {(() => {
                                 switch (selected) {
                                     case 0:
@@ -41,15 +41,15 @@ function App() {
                                     case 1:
                                         return <Instruction  />
                                     default:
-                                        return null
+                                        return 'PLease contact to App Support'
                                 }
                             })()}
                         </Card.Section>
                     </Tabs>
                 </Card>
-            </Page>*/}
+            </Page>
 
-             <BrowserRouter basename="app">
+             {/*<BrowserRouter basename="app">
                  <Link to="/">Home</Link>
                  <Link to="/instruction">Invoices</Link>
 
@@ -57,7 +57,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/instruction" element={<Instruction />} />
                     </Routes>
-                </BrowserRouter>
+                </BrowserRouter>*/}
         </AppProvider>
     );
 }
