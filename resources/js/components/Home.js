@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import {Page, Form, FormLayout, TextField, Button} from '@shopify/polaris';
+import {Form, FormLayout, TextField, Button} from '@shopify/polaris';
 
 
 function Home(){
@@ -10,8 +10,7 @@ function Home(){
     const handleUrlChange = useCallback((value) => setKey(value), []);
 
     return (
-        <Page title="">
-            <div  style={{paddingTop: '5px'}}>
+
                 <Form  noValidate onSubmit={handleSubmit}>
                     <FormLayout>
                         <TextField
@@ -25,9 +24,6 @@ function Home(){
                         <Button submit>Submit</Button>
                     </FormLayout>
                 </Form>
-            </div>
-
-        </Page>
     );
 }
 

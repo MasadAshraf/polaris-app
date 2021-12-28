@@ -1,12 +1,12 @@
 import React from 'react';
-import {Page, Card, Button} from '@shopify/polaris';
+import { Card, Button} from '@shopify/polaris';
 
 
 function Instruction(){
     return (
-        <Page title="Example app">
-            Instructions List
-        </Page>
+
+        <h1>            Instructions List</h1>
+
     );
 }
 
