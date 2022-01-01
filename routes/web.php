@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',function (){
-    return redirect()->route('home');
-});
+    return redirect()->route('app.home');
+})->middleware(['verify.shopify'])->name('home');
 Route::get('app/{path?}', function () {
     return view('app');
-})->name('home');
+})->middleware(['verify.shopify'])->name('app.home');
 /*Route::get('/', function () {
     return view('welcome');
 })->middleware(['verify.shopify'])->name('home');*/
