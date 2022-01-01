@@ -1,10 +1,11 @@
 import React, {useState, useCallback} from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import enTranslations from '@shopify/polaris/locales/en.json';
 import {AppProvider, Card, Tabs, Badge, Page} from '@shopify/polaris';
 import Home from "./Home";
 import Instruction from "./Instruction";
+import ReactNotification from 'react-notifications-component'
+
 
 function App() {
     const [selected, setSelected] = useState(0);
@@ -30,34 +31,28 @@ function App() {
     return (
 
         <AppProvider i18n={enTranslations}>
-            <Page>
-                <Card>
-                    <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
-                        <Card.Section >
-                            {(() => {
-                                switch (selected) {
-                                    case 0:
-                                        return <Home  />
-                                    case 1:
-                                        return <Instruction  />
-                                    default:
-                                        return 'PLease contact to App Support'
-                                }
-                            })()}
-                        </Card.Section>
-                    </Tabs>
-                </Card>
-            </Page>
+            <div className="app-container">
+                <ReactNotification />
+                <Page>
 
-             {/*<BrowserRouter basename="app">
-                 <Link to="/">Home</Link>
-                 <Link to="/instruction">Invoices</Link>
-
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/instruction" element={<Instruction />} />
-                    </Routes>
-                </BrowserRouter>*/}
+                    <Card>
+                        <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
+                            <Card.Section >
+                                {(() => {
+                                    switch (selected) {
+                                        case 0:
+                                            return <Home  />
+                                        case 1:
+                                            return <Instruction  />
+                                        default:
+                                            return 'PLease contact to App Support'
+                                    }
+                                })()}
+                            </Card.Section>
+                        </Tabs>
+                    </Card>
+                </Page>
+            </div>
         </AppProvider>
     );
 }

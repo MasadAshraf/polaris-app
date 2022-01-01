@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\HomeController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 Route::middleware(['verify.shopify'])->group(function () {
     Route::post('/auth', [HomeController::class,'createAuth']);
 });

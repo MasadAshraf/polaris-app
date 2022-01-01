@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('shopify-app::layouts.default')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel</title>
-    <!-- Styles -->
+@section('styles')
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
+@endsection
 
-<body>
+@section('content')
+    <!-- React root DOM -->
+    <div id="root">
+    </div>
+@endsection
 
-<!-- React root DOM -->
-<div id="root">
-</div>
 
+@section('scripts')
 <!-- React JS -->
 <script src="{{ asset('js/app.js') }}" defer></script>
 
-</body>
-</html>
+@endsection
