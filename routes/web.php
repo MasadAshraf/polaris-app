@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +23,5 @@ Route::get('app/{path?}', function () {
     return view('app');
 #})->name('app.home');
 })->middleware(['verify.shopify'])->name('app.home');
+
+Route::post('orders/get_orders',[OrderController::class,'index'])->middleware('savyour.shops');

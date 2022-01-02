@@ -18,7 +18,7 @@ class User extends Authenticate implements IShopModel
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','auth_key'
+        'name', 'email', 'password','auth_key','domain'
     ];
 
     /**
