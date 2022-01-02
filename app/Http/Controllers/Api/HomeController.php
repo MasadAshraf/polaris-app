@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function createAuth(Request $request): \Illuminate\Http\JsonResponse
+    public function setAuthKey(Request $request): \Illuminate\Http\JsonResponse
     {
         $request->validate([
             'key' => 'required|max:255',
@@ -20,6 +20,7 @@ class HomeController extends Controller
         return response()->json([
             'code' => 200,
             'message' => 'success',
+
         ]);
 
     }

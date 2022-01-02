@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import {Form, FormLayout, TextField, Button} from '@shopify/polaris';
+import {Page,Form, FormLayout, TextField, Button} from '@shopify/polaris';
 
 import instance from "../interceptor";
 import {NOTIFICATION_CONFIGS, REACT_APP_API_BASEURL} from "../constants";
@@ -7,7 +7,7 @@ import {store} from 'react-notifications-component';
 import axios from "axios";
 
 function Home() {
-    const [key, setKey] = useState('');
+    const [key, setKey] = useState(window.auth_key);
 
     const handleSubmit = useCallback((_event) => {
 
@@ -17,6 +17,7 @@ function Home() {
             }
             axios.post(REACT_APP_API_BASEURL + 'auth', {key: key},{headers : headers}).then(function (response) {
                 if (response.status === 200) {
+                    window.auth_key = key;
                     store.addNotification(
                         {
                             ...NOTIFICATION_CONFIGS,
@@ -49,7 +50,7 @@ function Home() {
     const handleUrlChange = useCallback((value) => setKey(value), []);
 
     return (
-
+    <Page>
         <Form noValidate onSubmit={handleSubmit}>
             <FormLayout>
                 <TextField
@@ -63,6 +64,7 @@ function Home() {
                 <Button submit>Submit</Button>
             </FormLayout>
         </Form>
+    </Page>
     );
 }
 
