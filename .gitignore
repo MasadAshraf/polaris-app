@@ -15,6 +15,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/.env.example
 /package-lock.json
 /public/mix-manifest.json

@@ -279,7 +279,7 @@ return [
     |
     */
 
-    'billing_enabled' => (bool)env('SHOPIFY_BILLING_ENABLED', false),
+    'billing_enabled' => (bool)env('SHOPIFY_BILLING_ENABLED', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -356,12 +356,10 @@ return [
     */
 
     'after_authenticate_job' => [
-        /*
             [
-                'job' => env('AFTER_AUTHENTICATE_JOB'), // example: \App\Jobs\AfterAuthorizeJob::class
+                'job' =>  \App\Jobs\AfterAuthenticateJob::class, // example: \App\Jobs\AfterAuthorizeJob::class
                 'inline' => env('AFTER_AUTHENTICATE_JOB_INLINE', false) // False = dispatch job for later, true = dispatch immediately
             ],
-        */
     ],
 
     /*

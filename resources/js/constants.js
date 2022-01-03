@@ -1,4 +1,4 @@
-export const REACT_APP_API_BASEURL = 'https://92d8-182-190-111-95.ngrok.io/api/';
+export const REACT_APP_API_BASEURL = window.react_api_base_url;
 export const NOTIFICATION_CONFIGS = {
     insert: "top",
     container: "bottom-center",

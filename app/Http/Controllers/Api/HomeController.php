@@ -17,9 +17,6 @@ class HomeController extends Controller
             ]);
             $user = Auth::user();
             $user->auth_key = $request->key;
-
-            $res = $user->api()->rest('GET', '/admin/shop.json');
-            $user->domain = $res['body']['shop']['domain'];
             $user->save();
 
             return response()->json([

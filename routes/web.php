@@ -16,12 +16,12 @@ use App\Http\Controllers\OrderController;
 Route::get('/',function (){
     return redirect()->route('app.home');
 #})->name('home');
-})->middleware(['verify.shopify'])->name('home');
+})->middleware(['verify.shopify','billable'])->name('home');
 
 
 Route::get('app/{path?}', function () {
     return view('app');
 #})->name('app.home');
-})->middleware(['verify.shopify'])->name('app.home');
+})->middleware(['verify.shopify','billable'])->name('app.home');
 
 Route::post('orders/get_orders',[OrderController::class,'index'])->middleware('savyour.shops');
