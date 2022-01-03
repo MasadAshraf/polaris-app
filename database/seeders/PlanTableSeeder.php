@@ -16,11 +16,11 @@ class PlanTableSeeder extends Seeder
     {
         DB::table('plans')->insert([
             "type" => 'RECURRING',
-            "name" => 'Basic',
+            "name" => 'App Charge',
             "price" => 1.00,
             "interval" => 'EVERY_30_DAYS', //for Annual change it to => ANNUAL
             "capped_amount" => 1.00,
-            "terms" => '$1.00 USD every 30 days',
+            "terms" => null,
             "trial_days" => 90,
             "test" => 0,
             "on_install" => 1,
