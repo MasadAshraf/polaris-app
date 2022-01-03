@@ -24,8 +24,8 @@ class PlanTableSeeder extends Seeder
             "trial_days" => 90,
             "test" => 0,
             "on_install" => 1,
-            "created_at" => NULL,
-            "updated_at" => NULL
+            "created_at" => date('Y-m-d H:i:s'),
+            "updated_at" => date('Y-m-d H:i:s')
         ]);
     }
 }
