@@ -31,8 +31,5 @@ class AfterAuthenticateJob implements ShouldQueue
      */
     public function handle()
     {
-        $res = $this->shop->api()->rest('GET', '/admin/shop.json');
-        $this->shop->domain = $res['body']['shop']['domain'];
-        $this->shop->save();
     }
 }

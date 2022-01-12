@@ -1,1 +1,0 @@
-!function () {'savyour' in window || (window.savyour = function () { window.savyour.q.push(arguments)}, window.savyour.q = []); var e = (new Date).getTime();const n = document.createElement('script');n.src = 'https://affiliate.savyour.com.pk/sap.min.js?v=' + e, n.async = !0, n.defer = !0;const t = document.getElementsByTagName('script')[0];t.parentNode.insertBefore(n, t)}();

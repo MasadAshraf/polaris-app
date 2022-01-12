@@ -337,11 +337,11 @@ return [
 
     'scripttags' => [
 
-        [
-            'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', env('APP_URL') . 'scripttags/savyour.js'),
-            'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
-            'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
-        ],
+//        [
+//            'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', env('APP_URL') . 'scripttags/myjs.js'),
+//            'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
+//            'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
+//        ],
     ],
 
     /*
@@ -356,10 +356,10 @@ return [
     */
 
     'after_authenticate_job' => [
-            [
-                'job' =>  \App\Jobs\AfterAuthenticateJob::class, // example: \App\Jobs\AfterAuthorizeJob::class
-                'inline' => env('AFTER_AUTHENTICATE_JOB_INLINE', false) // False = dispatch job for later, true = dispatch immediately
-            ],
+//            [
+//                'job' =>  \App\Jobs\AfterAuthenticateJob::class, // example: \App\Jobs\AfterAuthorizeJob::class
+//                'inline' => env('AFTER_AUTHENTICATE_JOB_INLINE', false) // False = dispatch job for later, true = dispatch immediately
+//            ],
     ],
 
     /*
