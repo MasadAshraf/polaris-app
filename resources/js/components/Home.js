@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import {Page} from '@shopify/polaris';
+import {Card, Heading, Page} from '@shopify/polaris';
 
 function Home() {
     const [key, setKey] = useState();
@@ -9,7 +9,10 @@ function Home() {
 
     return (
     <Page>
-        <h1>this is home</h1>
+        <Heading element="h1">Polaris App Dashboard</Heading>
+        <Card title='Home Dashboard'>
+
+        </Card>
     </Page>
     );
 }

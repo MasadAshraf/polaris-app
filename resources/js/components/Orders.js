@@ -1,7 +1,7 @@
 import React from 'react';
 import {Page, Heading, Card} from '@shopify/polaris';
 
-function Instruction() {
+function Orders() {
     return (
 
         <Page>
@@ -14,4 +14,4 @@ function Instruction() {
     );
 }
 
-export default Instruction
+export default Orders
