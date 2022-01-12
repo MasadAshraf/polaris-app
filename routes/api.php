@@ -14,8 +14,3 @@ use App\Http\Controllers\Api\HomeController;
 |
 */
 
-Route::middleware(['verify.shopify'])->group(function () {
-    Route::post('/auth', [HomeController::class,'setAuthKey']);
-});
-
-

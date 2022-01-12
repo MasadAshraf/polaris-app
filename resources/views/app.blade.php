@@ -8,12 +8,6 @@
     <!-- React root DOM -->
     <script>
         window.react_api_base_url = '{{env('APP_URL','https/localhost/api')}}' + 'api/';
-        @auth
-            window.auth_key = `{{\Illuminate\Support\Facades\Auth::user()->auth_key}}`;
-        @endauth
-        @guest
-            window.auth_key = ''
-        @endguest
     </script>
     <div id="root">
     </div>
